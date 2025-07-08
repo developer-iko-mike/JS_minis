@@ -1,0 +1,1 @@
+document.querySelectorAll('.color').forEach(color => color.addEventListener("click", event => document.documentElement.style.setProperty("--main" , event.target.dataset.color)))

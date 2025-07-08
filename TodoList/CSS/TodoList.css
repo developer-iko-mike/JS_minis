@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+body {  
+  background-color: #343f5c;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  font-family: sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+.todo {
+  margin-top: 8rem;
+}
+
+.todo__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 32rem;
+  height: 4.5rem;
+  background-color: #423e71;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 0.3rem;
+}
+.todo__item {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.todo__image {
+  cursor: pointer;
+}
+
+.p {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+}
+#input {
+  background-color: #232d41;
+  width: 32rem;
+  height: 3.2rem;
+  margin-top: 1.2rem;
+  padding: 0 1.5rem;
+}
+#input:focus{
+border: 4px solid #233f77;
+}
+.empty__wrong{
+    display: none;
+}
+.hidden__title{
+color: #f00;
+font-size: 3rem;
+margin-top: 1rem;
+font-family: fantasy;
+}
+.toClose__wrong{
+    display: none;
+}
+.hidden_box{
+position: absolute;
+bottom: 1rem;
+right: -30rem;
+background-color: #fff;
+padding: 1.5rem 2rem;
+transition: all 1s ease-in-out 0.05s;
+}
+.hidden_box p {
+    color: #0f0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: cursive;
+}
+@media only screen and (max-width: 520px){
+    .todo__items , #input {
+        width: 98vw;
+    }}

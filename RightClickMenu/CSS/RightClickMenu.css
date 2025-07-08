@@ -1,0 +1,76 @@
+* {
+    list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  color: #323;
+  text-decoration: none;
+}
+
+body {
+    background-color: #f1f4f5;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+#RightClickMenu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: #fff;
+    text-align: start;
+    border-radius: 1rem;
+    padding: 1rem 1.4rem;
+}
+.items{
+border-bottom: 1px solid #c1c1c114;
+width: 100%;
+border-radius: 0;
+padding-bottom: 0.5rem;
+margin-top: 0.5rem;
+display: flex;
+align-items: center;
+gap: 0.7rem;
+cursor: pointer;
+}
+.items:hover{
+background-color: #c1c1c114;
+border-radius: 1rem;
+}
+.share{
+    margin-top: 0;
+}
+.item__image{
+    border-radius: 0;
+}
+.title__item{
+    transition: color 0.5s ease-in-out 0.1s;
+}
+.items:hover .title__item{
+    color: #3a1ec4;
+}
+.items:hover .title__delete{
+    color: #ff4f14;
+}
+.items:hover .item__image{
+    display: none;
+}
+
+.items:hover .item__image___hover{
+    display: block;
+}
+.item__image___hover{
+    display: none;
+    border-radius: 0;
+}

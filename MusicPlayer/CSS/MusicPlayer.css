@@ -1,0 +1,174 @@
+* {
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  color: #323;
+  text-decoration: none;
+}
+
+body {
+  background-image: url(../Assets/NWA-SOC.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  backdrop-filter: blur(1rem);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+.MusicPlayer {
+}
+
+.controls {
+  background-color: #efefef;
+  /* background-color: #ffffff; */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+  height: 35rem;
+  margin-top: 6rem;
+  position: relative;
+  border-radius: 2rem;
+}
+#musicCover {
+  width: 24rem;
+  height: 20rem;
+  position: absolute;
+  top: -5rem;
+  box-shadow: 0px 11px 3rem -13px #000000b0;
+  border-radius: 1rem;
+}
+#nameRappers {
+  margin-top: 1rem;
+  font-weight: 500;
+  font-family: cursive;
+  text-align: center;
+}
+#nameSong {
+  margin-top: 18rem;
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: revert;
+}
+.times {
+  margin-top: 2rem;
+}
+#time {
+  position: absolute;
+  left: 1.5rem;
+  font-size: 1.1rem;
+}
+#fullTime {
+  position: absolute;
+  right: 1.5rem;
+  font-size: 1.1rem;
+}
+.preplynex {
+  margin-top: 0.5rem;
+  /* margin-top: 4.5rem; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 12rem;
+}
+#pause {
+  display: none;
+  cursor: pointer;
+}
+#previous,
+#play,
+#nextMusic {
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.progress-container {
+  background: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px;
+  height: 4px;
+  width: 90%;
+}
+
+.progress {
+  background: #242323;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: space-between;
+}
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px;
+  height: 4px;
+  width: 90%;
+} 
+
+.progress {
+  background: #242323;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    backdrop-filter: blur(0.4rem);
+  }
+  .controls {
+    background-color: #ffffffc1;
+    width: 100vw;
+    height: 33rem;
+  }
+  #musicCover {
+    width: 90%;
+    height: 50%;
+  }
+  #nameSong {
+    margin-top: 16rem;
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  body {
+    backdrop-filter: blur(0.3rem);
+  }
+  .controls {
+    background-color: #ffffff8d;
+    height: 29rem;
+  }
+  #nameSong {
+    margin-top: 12rem;
+    font-size: 1.4rem;
+  }
+}

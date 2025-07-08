@@ -1,0 +1,136 @@
+* {
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  color: #404040;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f1f3f8;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+button , input {
+    background-color: #fff;
+    padding: 1rem;
+    font-size: 1.2rem;
+    transition: all 0.25s ease-in-out 0.05s;
+}
+
+:root{
+    --bgy: 2px solid #4c3d3d44;
+    --tdc: #ebeff1;
+    --orn: #fe9c0a;
+    --color-test: #e54c00;
+    --main: #1a6eff;
+}
+.film145 ,  .film146{}
+
+:root{
+    --blu: #77cce1;
+}
+
+body{
+    background-color: var(--blu);
+    align-items: center;
+}
+.produckt_about{
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #eceef0;
+}
+.about_header{
+    width: 100%;
+    background-color: #404040;
+    display: flex;
+    border-radius: 0;
+}
+.about__back{
+    width: 9rem;
+    height: 3rem;
+    margin: 2.25% 0 2.25% 5rem;
+    border-radius: 1.3rem;
+    transition: all 0.5s ease-in-out 0.05s;
+    cursor: pointer;
+    background: transparent;
+    color: #fff
+}
+.about__back:hover{
+    background-color: var(--blu);
+    color: #4d0035;
+}
+.about__produckt_main{
+display: flex;
+}
+.left_about{
+    text-align: left;
+    width: 50%;
+    height: 30rem;
+    margin: 6rem 0 6rem 5rem;
+}
+.nameProduckt{
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.titleProduckt{
+    line-height: 2.5rem;
+    font-size: 1.1rem;
+}
+.right_about{    
+    width: 50%;
+    margin-top: 24vh;
+    margin-bottom: 24vh;
+}
+.about__image{
+    width: 100%;
+}
+button{
+    border: 2px solid var(--blu);
+    padding: 0.7rem 2rem;
+    border-radius: 50rem;
+}
+.about__img{
+    width: 66%;
+    height: 57%;
+}
+@media only screen and (max-width: 700px) {
+.about__produckt_main{
+    flex-direction: column;
+    align-items: center;
+}
+.produckt_about {
+    height: 100vh;
+}
+.about_header {
+    justify-content: center;
+}
+.about__back {
+    margin: 2.5rem auto;
+}
+.left_about{
+    text-align: center;
+    width: 96%;
+    height: auto;
+    margin: 5rem 10% 0rem 10%;
+}
+.right_about{    
+    width: 96%;
+    margin: 3rem auto;
+}
+}

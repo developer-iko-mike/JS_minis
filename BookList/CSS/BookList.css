@@ -1,0 +1,142 @@
+* {
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  color: #343434;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f1f3f8;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+button , input {
+    background-color: #fff;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+:root{
+    --bgy: 2px solid #4c3d3d44;
+    --tdc: #ebeff1;
+    --orn: #fe9c0a;
+    --color-test: #e54c00;
+    --main: #1a6eff;
+}
+
+
+.BookList{}
+
+header{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 3rem;
+gap: 1rem;
+font-size: 3rem;
+}
+
+.book_header_book{
+    color: var(--orn)
+}
+
+main{
+width: 72rem;
+text-align: left;
+}
+
+form{
+margin-top: 3rem;
+}
+
+label{
+
+}
+
+input{
+width: 100%;
+margin: 0.5rem 0 1rem 0;
+}
+
+#btn{
+width: 100%;
+background-color: var(--orn);
+color: #fff;
+font-weight: 700;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+transition: all 0.2s;
+}
+
+#btn:hover{
+    background-color: #ff99007a; 
+     color: #fff;
+}
+
+.anim{
+    background-color: var(--orn);
+    width: 5rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -10rem;
+    transform: skewX(45deg);
+    z-index: -1;
+}
+
+#btn:hover .anim{
+    animation: whiteMove 1s ease-in-out 0.1s forwards;
+}
+
+@keyframes whiteMove {
+    0%{ 
+        width: 1%;
+    }
+    100%{
+        left: 0;
+        width: 101%;
+        transform: skewX(0deg);
+    }
+}
+
+table{
+margin-top: 5rem;
+width: 100%;
+text-align: center;
+}
+
+tr{
+    display: table-row;
+    height: 4rem;
+}
+
+th{
+    background-color: #fff;
+    border-right: var(--bgy);
+    border-radius: 0px;
+    overflow-x: auto;
+}
+
+th:last-child{
+    border-right: none;
+}
+
+.nameBook , .author , .yaer{
+    background-color: var(--tdc);
+    border-bottom: var(--bgy);
+}

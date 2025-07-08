@@ -1,0 +1,285 @@
+/* Plagins */
+
+* {
+    text-transform: capitalize;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    margin: 0;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 953px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+section {
+    width: 530px;
+    height: 100%;
+    background-color: #202020;
+    padding: 0 3px;
+    position: relative;
+}
+
+input {
+    background: transparent;
+}
+
+
+/* Style Class */
+
+
+/* Header      */
+
+.header {
+    width: 100%;
+    height: 34px;
+    display: flex;
+    padding: 0.5rem;
+}
+
+.header img {
+    /* width: 17px;
+                height: 15px; */
+    padding: 10px 8px;
+    cursor: pointer;
+}
+
+.header img:hover {
+    background-color: #3b3b3b;
+    border-radius: 3px;
+}
+
+.header .left {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-left: 59px;
+}
+
+.header .left #img1 {
+    position: absolute;
+    top: 1px;
+    left: 14px;
+}
+
+.header .left #img2 {
+    position: absolute;
+    top: -2px;
+    left: 154px;
+}
+
+.header .right {
+    width: 15%;
+    /* display: flex;
+                align-items: center; */
+}
+
+.header .right img {
+    position: absolute;
+    top: -3px;
+    left: 480px;
+}
+
+
+/* Main */
+
+.main {
+    width: 100%;
+    height: 270px;
+    padding: 0 10px;
+}
+
+.main .up {
+    position: absolute;
+    top: 95px;
+    right: 12px;
+    font-size: 85px;
+    direction: rtl;
+}
+
+.main .dawn {
+    position: absolute;
+    top: 258px;
+    left: 29px;
+    display: flex;
+    gap: 2.2rem;
+    transition: all 300ms;
+}
+
+.main button {
+    border-radius: 3px;
+    padding: 13px 14px;
+}
+
+.main .dawn .dark-black {
+    opacity: 0.3;
+    font-size: 15px;
+    background: transparent;
+}
+
+.main .dawn .light-black {
+    cursor: pointer;
+    font-size: 15.5px;
+    background: transparent;
+}
+
+.main .dawn .light-black:hover {
+    background-color: #3b3b3b;
+}
+
+.main .dawn .light-black:active {
+    background-color: #4a4a4a67;
+}
+
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    height: 649px;
+    display: flex;
+    justify-content: center;
+    gap: 3.5px;
+    flex-wrap: wrap;
+    transition: all 500ms ease-in 30ms;
+}
+
+.footer button {
+    width: 124px;
+    height: 105px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.footer .dark-black {
+    background-color: #323232;
+    color: #dcdcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .dark-black:hover {
+    background-color: #3b3b3b;
+}
+
+.footer .dark-black:active {
+    transform: scale(0.95);
+}
+
+.footer .light-black {
+    background-color: #3b3b3b;
+    color: #dfdfdf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .light-black:hover {
+    background-color: #323232;
+}
+
+.footer .light-black:active {
+    transform: scale(0.95);
+}
+
+.footer .dark-green {
+    background-color: #33f325;
+    color: #000;
+}
+
+.footer .dark-green:hover {
+    background-color: #33f32593;
+}
+
+.footer .dark-green:active {
+    transform: scale(0.95);
+}
+
+
+/* Media Queries */
+
+
+/* @media screen and (min-width: 513px) {
+.header .right img {
+  position: absolute;
+  top: -3px;
+  left: 480px;    
+}
+} */
+
+@media screen and (max-width: 512px) {
+    .header .right img {
+        position: absolute;
+        top: -2px;
+        right: 10px;
+        left: auto;
+    }
+    .main {
+        flex-direction: column-reverse;
+        display: flex;
+        height: 229px;
+    }
+    .main .dawn {
+        position: sticky;
+        display: flex;
+        justify-content: space-between;
+        gap: 0;
+        transition: all 300ms;
+        max-width: 31rem;
+    }
+    .footer button {
+        width: 100%;
+        border-radius: 8px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(90px, 1fr));
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .main {
+        flex-direction: column-reverse;
+        display: flex;
+        height: 229px;
+    }
+    .main .dawn {
+        position: sticky;
+        display: flex;
+        justify-content: space-between;
+        gap: 0;
+        transition: all 300ms;
+        max-width: 31rem;
+    }
+    .main .dawn .dark-black {
+        display: none;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 0.2rem;
+        height: 70vh;
+    }
+}

@@ -1,0 +1,46 @@
+* {
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  color: #343434;
+  text-decoration: none;
+}
+
+.continer {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../Assets/bg.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(30%);
+}
+
+button {
+    background-color: #fff;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.rangeBox{
+    width: 23rem;
+    height: 3.5rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+#range{
+    width: 83%;
+}
+@media only screen and (max-width: 24rem){
+    .rangeBox{
+        width: 94vw;
+    }
+} 

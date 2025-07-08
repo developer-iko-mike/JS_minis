@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+}
+
+body {
+  background-color: #f1f3f8;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.hidden_box {
+    display: none;
+  display: block;
+  font-size: 2rem;
+  background-color: #fff;
+  padding: 1.2rem 1.6rem;
+  border-radius: 1rem;
+}
+.result__key_code {
+  display: block;
+}
+#result {
+    display: block;
+    display: none;
+  font-size: 35rem;
+  font-weight: 500;
+  color: #424242;
+}
+.about {
+    display: flex;
+    display: none;
+  width: 80vw;
+justify-content: space-between;
+}
+.about__event {
+    width: 22rem;
+    height: 9.5rem;
+    background-color: #fff;
+    box-shadow: 1px 1px 1rem 1px #e1e1e1;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out 0.08s; 
+    overflow: auto;
+}
+.about__event:hover {
+transform: translateY(-1rem);
+box-shadow: 1px 20px 1rem 1px #e1e1e1;
+}
+.header_event__about {
+  background-color: #a9d8f0;
+  height: 25%;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+.main_event__about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    font-size: 3.5rem;
+
+}
+#whareKey{
+    font-size: 1.2rem;
+    color: #c1c1c1;
+}
+.event__location{
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 1768px){
+.about{
+    flex-wrap: wrap;
+    row-gap: 3.5rem;
+}}
+@media only screen and (max-width: 930px){
+    .about{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        }
+        .about__event {
+            width: 80%;
+    }
+    #result {
+
+      font-size: 25rem;
+
+    }
+    .hidden_box {
+        padding: 1.2rem 2.6rem;
+        border-radius: 1.5rem;
+        width: 90vw;
+        line-height: 3.5rem;
+    }
+}
+@media only screen and (max-width: 420px){
+    .about__event {
+        width: 100%;
+    }
+    #result {
+
+        font-size: 16rem;
+
+    }
+    #eventCode{
+        font-size: 2.5rem;
+    }
+    .hidden_box {
+        padding: 1.2rem;
+        border-radius: 2rem;
+        width: 98vw;
+    }
+    .about {
+        row-gap: 3rem;
+    }
+ 
+}

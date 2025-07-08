@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+}
+
+body {
+    background-image: url(../Assets/bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color: #86ba6a; */
+    /* background: linear-gradient(45deg, #e6f6ff, #ffdbdb); */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Buy-Taket {
+    width: 67rem;
+    background-color: #ffffff40;
+    height: 31rem;
+    padding: 4rem
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10rem;
+    height: 9rem;
+    row-gap: 2rem;
+}
+
+input {
+    height: 3.5rem;
+    text-align: left;
+    padding: 0 1.5rem;
+}
+
+.selects {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+
+#countrys {
+    width: 24.4rem;
+    height: 3.2rem;
+    font-size: 1.2rem;
+    padding: 0 1.5rem;
+}
+
+#option {
+    text-align: left;
+}
+
+#citys {
+    width: 24.4rem;
+    height: 3.2rem;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+}
+
+option,
+.TAL {
+    text-align: left;
+}
+
+button {
+    margin-top: 3rem;
+    padding: 1.2rem 1.5rem;
+    background-color: #eac900;
+    background-color: #abffed;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out 0.1s;
+    border: 1px solid #00d0ff;
+}
+
+button:hover {
+    background-color: #181500;
+    background-color: #00d0ff;
+    color: #fff;
+    border: 1px solid #006eff;
+}

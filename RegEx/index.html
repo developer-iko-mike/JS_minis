@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./Regex.css">
+  <title>RegEx Playground</title>
+</head>
+<body>
+  <main>
+    <a class="headerTiTle" href="https://regexlearn.com/playground" target="_blank">🔍 RegEx Playground</a>
+    <div class="pattern-box">
+      <label for="regexInput">Regex Pattern:</label>
+      <input type="text" id="regexInput" placeholder="e.g.: ^[a-zA-Z0-9]+$" />
+      <code id="currentPattern"></code>
+    </div>
+    <div class="text-box">
+      <label for="textInput">Test Text:</label>
+      <input type="text" id="textInput" placeholder="Enter your text or leave empty" />
+    </div>
+    <div class="controls">
+      <button id="caseBtn" type="button">Case Sensitive: <span id="caseStatus">Off</span></button>
+      <button id="globalBtn" type="button">Global: <span id="globalStatus">On</span></button>
+    </div>
+    <p id="resultText" class="result">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique necessitatibus dolor, omnis ducimus alias adipisci illum, voluptatem quasi sit unde ut nam eius corporis vero eos officia! Optio, fugit ullam.
+    </p>
+  </main>
+  <script src="./Regex.js"></script>
+</body>
+</html>

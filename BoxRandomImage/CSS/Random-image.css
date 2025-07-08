@@ -1,0 +1,80 @@
+* {
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  color: #343434;
+  text-decoration: none;
+}
+
+body {
+    background-color: #333333;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+button , input {
+    background-color: #fff;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.slider{
+    width: 50vw;
+    height: 75vh;
+    position: relative;
+}
+#bg{
+    width: 100%;
+    height: 100%;
+    border: 0.5rem solid #414141;
+    box-shadow: 0px 0px 0.6rem 8px #636363;
+}
+
+#preveat,#next{
+    position: absolute;
+    top: 45%;
+    bottom: 45%;
+    cursor: pointer;
+}
+#preveat{
+left: 25px;
+}
+#next{
+right: 25px;
+}
+.nexts,.prevts{
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    width: 5.5rem;
+    top: 0;
+    transition: all 0.3s ease-in;
+}
+.nexts:hover , .prevts:hover{
+    background-color: #67676758;
+}
+.prevts{
+right: 0;
+}
+
+@media only screen and (max-width: 600px){
+    .slider{
+        width: 90vw;
+    }
+}
+@media only screen and (min-width: 1920px){
+    .slider{
+        width: 50rem;
+    }
+}

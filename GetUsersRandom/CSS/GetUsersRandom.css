@@ -1,0 +1,109 @@
+* {
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  color: #404040;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f1f3f8;
+  background-color: #202020;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  text-align: left;
+  overflow-x: hidden;
+  flex-direction: column;
+  padding: 4rem 0;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 3rem;
+}
+
+button{
+  background-color: #fff;
+  padding: 1rem 1.3rem;
+  font-size: inherit;
+  transition: all 0.25s ease-in-out 0.05s;
+  overflow: hidden;
+  position: relative;
+}
+button:hover{
+    backdrop-filter: blur(100px);
+    background-color: #f1f3f8d6;
+}
+.moveObj{
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #000000;
+    box-shadow: 0px 5px 2rem 20px #000000;
+}
+button:hover{
+    color: #f1f3f8;
+}
+button:hover .moveObj{
+    animation: moveYourAss 1s ease-in-out 0.1s both;
+}
+button:active{
+    background-color: #fff;
+    color: #000000;
+}
+button:active .moveObj{
+    animation: moveYourAss 1s ease-in-out 0.1s alternate-reverse;
+}
+
+@keyframes moveYourAss {
+    100%{
+        width: 100%; 
+    }
+}
+
+.users{
+    display: none;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #f1f3f8;
+    margin-bottom: 3rem;
+    padding: 0.5rem
+}
+
+ul{
+    border-left: 2px solid #81818111;
+    border-radius: 0;
+    padding-left: 0.5rem;
+}
+
+ul:first-child{
+    border-left: 0;
+}
+
+li:first-child{
+    margin-bottom: 2rem;
+}
+
+li{
+    border-radius: 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #81818111;
+    margin-top: 0.75rem;
+}
+
+li:last-child{
+    border-bottom: none;
+}
