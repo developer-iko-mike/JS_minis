@@ -83,29 +83,11 @@ button:hover {
     color: #fff;
 }
 button:hover .minibox{
-    animation: addwidth 2.5s ease-in-out infinite;
+    animation: addwidth .25s ease-in-out forwards;
 }
 @keyframes addwidth{
 0%{
 width: 0%;
-}
-10%{
-    width: 65%;
-}
-20%{
-    width: 75%;
-}
-30%{
-    width: 80%;
-}
-40%{
-    width: 85%;
-}
-80%{
-    width: 90%;
-}
-90%{
-    width: 95%;
 }
 100%{
     width: 100%;

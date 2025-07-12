@@ -1,85 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| JS ---------------- KeyBoard |</title>
+    <title>KeyWoard Remaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./CSS/KeyBoard.css">
-    <link rel="icon" type="icon/image" href="./Assets/GreenGTAIcon.png">
 </head>
+
 <body>
-    <section class="KeyBoard">
-        <div class="result_box">
-            <p id="result"></p>
+    <div class="wave"><svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+                fill="rgba(78,205,196,0.1)" />
+        </svg>
+    </div>
+    <div class="wave"><svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+                fill="rgba(255,107,107,0.1)" />
+        </svg>
+    </div>
+
+    <div class="header">
+        <h1>صفحه کلید تعاملی</h1>
+        <p>هر کلیدی را فشار دهید یا روی کلیدها کلیک کنید</p>
+    </div>
+
+    <div class="result-box">
+        <div id="result"></div>
+    </div>
+
+    <div class="container">
+        <!-- Line 1 -->
+        <div class="keyboard-line">
+            <div class="key" id="Backquote">~<div class="secondary-label">`</div>
+            </div>
+            <div class="key" id="Digit1">!<div class="secondary-label">1</div>
+            </div>
+            <div class="key" id="Digit2">@<div class="secondary-label">2</div>
+            </div>
+            <div class="key" id="Digit3">#<div class="secondary-label">3</div>
+            </div>
+            <div class="key" id="Digit4">$<div class="secondary-label">4</div>
+            </div>
+            <div class="key" id="Digit5">%<div class="secondary-label">5</div>
+            </div>
+            <div class="key" id="Digit6">^<div class="secondary-label">6</div>
+            </div>
+            <div class="key" id="Digit7">&<div class="secondary-label">7</div>
+            </div>
+            <div class="key" id="Digit8">*<div class="secondary-label">8</div>
+            </div>
+            <div class="key" id="Digit9">(<div class="secondary-label">9</div>
+            </div>
+            <div class="key" id="Digit0">)<div class="secondary-label">0</div>
+            </div>
+            <div class="key" id="Minus">_<div class="secondary-label">-</div>
+            </div>
+            <div class="key" id="Equal">+<div class="secondary-label">=</div>
+            </div>
+            <div class="key special backspace" id="Backspace"><i class="fas fa-backspace"></i></div>
         </div>
-        <div class="continer">
-            <section class="line1">
-                <div id="Escape" class="key esc">ESC</div>
-                <div id="Digit1" class="key ma">1</div>
-                <div id="Digit2" class="key loc2 ma">2</div>
-                <div id="Digit3" class="key loc3 ma">3</div>
-                <div id="Digit4" class="key loc4 ma">4</div>
-                <div id="Digit5" class="key loc5 ma">5</div>
-                <div id="Digit6" class="key loc5 ma">6</div>
-                <div id="Digit7" class="key loc4 ma">7</div>
-                <div id="Digit8" class="key loc3 ma">8</div>
-                <div id="Digit9" class="key ma loc2">9</div>
-                <div id="Digit0" class="key ma">0</div>
-                <div id="Minus" class="key ma">-</div>
-                <div id="Equal" class="key ma">+</div>
-                <div id="Backspace" class="key back">BackSpace</div>
-            </section>
 
-<section class="line2">
-    <div id="TAB" class="key tab">TAB</div>
-    <div id="KeyQ" class="key ma">Q</div>
-    <div id="KeyW" class="key loc6 ma">W</div>
-    <div id="KeyE" class="key loc3 ma">E</div>
-    <div id="KeyR" class="key loc4 ma">R</div>
-    <div id="KeyT" class="key loc5 ma">T</div>
-    <div id="KeyY" class="key loc5 ma">Y</div>
-    <div id="KeyU" class="key loc4 ma">U</div>
-    <div id="KeyI" class="key loc3 ma">I</div>
-    <div id="KeyO" class="key loc2 ma">O</div>
-    <div id="KeyP" class="key ma">P</div>
-    <div id="BracketLeft" class="key ma">[{</div>
-    <div id="BracketRight" class="key ma">}]</div>
-    <div id="Backslash" class="key ma">\|</div>
-</section>
-
-<section class="line3">
-    <div id="CapsLock" class="key caps">CAPS</div>
-    <div id="KeyA" class="key loc6 ma">A</div>
-    <div id="KeyS" class="key loc6 ma">S</div>
-    <div id="KeyD" class="key loc6 ma">D</div>
-    <div id="KeyF" class="key loc4 ma">F</div>
-    <div id="KeyG" class="key loc5 ma">G</div>
-    <div id="KeyH" class="key loc5 ma">H</div>
-    <div id="KeyJ" class="key loc4 ma">J</div>
-    <div id="KeyK" class="key loc3 ma">K</div>
-    <div id="KeyL" class="key loc2 ma">L</div>
-    <div id="Semicolon" class="key ma">:;</div>
-    <div id="Quote" class="key ma">'"</div>
-    <div id="Enter" class="key enter">ENTER</div>
-</section>
-
-<section class="line4">
-    <div id="ShiftLeft" class="key lshift">SHIFT</div>
-    <div id="KeyZ" class="key ma">Z</div>
-    <div id="KeyX" class="key loc2 ma">X</div>
-    <div id="KeyC" class="key loc3 ma">C</div>
-    <div id="KeyV" class="key loc4 ma">V</div>
-    <div id="KeyB" class="key loc5 ma">B</div>
-    <div id="KeyN" class="key loc5 ma">N</div>
-    <div id="KeyM" class="key loc4 ma">M</div>
-    <div id="Comma" class="key loc3 ma">,</div>
-    <div id="Period" class="key loc2 ma">.</div>
-    <div id="Slash" class="key loc1 ma">?</div>
-    <div id="ShiftRight" class="key rshift">SHIFT</div>
-</section>
+        <!-- Line 2 -->
+        <div class="keyboard-line">
+            <div class="key special tab" id="Tab">TAB</div>
+            <div class="key" id="KeyQ">Q</div>
+            <div class="key" id="KeyW">W</div>
+            <div class="key" id="KeyE">E</div>
+            <div class="key" id="KeyR">R</div>
+            <div class="key" id="KeyT">T</div>
+            <div class="key" id="KeyY">Y</div>
+            <div class="key" id="KeyU">U</div>
+            <div class="key" id="KeyI">I</div>
+            <div class="key" id="KeyO">O</div>
+            <div class="key" id="KeyP">P</div>
+            <div class="key" id="BracketLeft">{<div class="secondary-label">[</div>
+            </div>
+            <div class="key" id="BracketRight">}<div class="secondary-label">]</div>
+            </div>
+            <div class="key" id="Backslash">|<div class="secondary-label">\</div>
+            </div>
         </div>
-        <p class="title">HANDS ON KEYBOARD.</p>
-    </section>
-    <script src="./JavaST/KeyBoard.js "></script>
+
+        <!-- Line 3 -->
+        <div class="keyboard-line">
+            <div class="key special caps" id="CapsLock"><i class="fas fa-capsules"></i></div>
+            <div class="key" id="KeyA">A</div>
+            <div class="key" id="KeyS">S</div>
+            <div class="key" id="KeyD">D</div>
+            <div class="key" id="KeyF">F</div>
+            <div class="key" id="KeyG">G</div>
+            <div class="key" id="KeyH">H</div>
+            <div class="key" id="KeyJ">J</div>
+            <div class="key" id="KeyK">K</div>
+            <div class="key" id="KeyL">L</div>
+            <div class="key" id="Semicolon">:<div class="secondary-label">;</div>
+            </div>
+            <div class="key" id="Quote">"<div class="secondary-label">'</div>
+            </div>
+            <div class="key special enter" id="Enter"><i class="fas fa-arrow-right"></i></div>
+        </div>
+
+        <!-- Line 4 -->
+        <div class="keyboard-line">
+            <div class="key special shift" id="ShiftLeft"><i class="fas fa-arrow-up"></i></div>
+            <div class="key" id="KeyZ">Z</div>
+            <div class="key" id="KeyX">X</div>
+            <div class="key" id="KeyC">C</div>
+            <div class="key" id="KeyV">V</div>
+            <div class="key" id="KeyB">B</div>
+            <div class="key" id="KeyN">N</div>
+            <div class="key" id="KeyM">M</div>
+            <div class="key" id="Comma">
+                <<div class="secondary-label">,
+            </div>
+        </div>
+        <div class="key" id="Period">><div class="secondary-label">.</div>
+        </div>
+        <div class="key" id="Slash">?<div class="secondary-label">/</div>
+        </div>
+        <div class="key special shift" id="ShiftRight"><i class="fas fa-arrow-up"></i></div>
+    </div>
+
+    <!-- Line 5 -->
+    <div class="keyboard-line">
+        <div class="key special" id="ControlLeft">CTRL</div>
+        <div class="key special" id="MetaLeft"><i class="fab fa-windows"></i></div>
+        <div class="key special" id="AltLeft">ALT</div>
+        <div class="key space" id="Space"></div>
+        <div class="key special" id="AltRight">ALT</div>
+        <div class="key special" id="MetaRight"><i class="fas fa-bars"></i></div>
+        <div class="key special" id="ControlRight">CTRL</div>
+        <div class="key" id="ArrowLeft"><i class="fas fa-arrow-left"></i></div>
+        <div class="key" id="ArrowUp"><i class="fas fa-arrow-up"></i></div>
+        <div class="key" id="ArrowDown"><i class="fas fa-arrow-down"></i></div>
+        <div class="key" id="ArrowRight"><i class="fas fa-arrow-right"></i></div>
+    </div>
+    </div>
+
+    <div class="status-bar">
+        <div class="status-item">
+            <div class="status-indicator" id="caps-indicator"></div>
+            <span>Caps Lock</span>
+        </div>
+        <div class="status-item">
+            <div class="status-indicator" id="shift-indicator"></div>
+            <span>Shift</span>
+        </div>
+    </div>
+    <script src="./JavaST/KeyBoard.js"></script>
 </body>
+
 </html>

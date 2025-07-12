@@ -1,0 +1,145 @@
+* {
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  color: #343434;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f1f3f8;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+button {
+  background-color: #fff;
+}
+
+.LightThame-DarkThame__withLocalStorage {}
+
+main {
+  max-width: 1920px;
+  width: 80vw;
+  margin: 0 auto;
+  padding-left: 3rem;
+  padding-right: 1rem;
+}
+nav {
+  position: absolute;
+  top: 3rem;
+  right: 4rem;
+}
+button {
+  width: 6.5rem;
+  height: 3rem;
+  background-color: #393939;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.7rem;
+  padding-right: 0.8rem;
+  margin-bottom: 10rem;
+}
+.circle {
+  width: 1.9rem;
+  height: 65%;
+  background-color: #fff;
+  border-radius: 4rem;
+  cursor: pointer;
+}
+
+.mains {
+  margin-top: 20rem;
+  display: flex;
+  width: 100%;
+}
+
+.left {
+  width: 50%;
+  text-align: left;
+}
+
+h1 {
+  font-size: 6rem;
+}
+.left_welcome {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+.left_title {
+  font-size: 1.7rem;
+}
+a {
+  margin-top: 3rem;
+  display: inline-block;
+}
+.right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.right-top {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+
+.witblk {
+  color: #000;
+}
+.dark {
+  background-color: #000;
+}
+
+.dark h1 {
+  color: #fff;
+}
+.dark .left_welcome {
+  color: #fff;
+}
+.dark .left_title {
+  color: #fff;
+}
+.dark a {
+  color: #fff;
+}
+
+@media only screen and (max-width: 1480px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media only screen and (max-width: 1125px) {
+  .mains {
+    flex-direction: column-reverse;
+    margin-top: 10rem;
+  }
+  .left {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+  .right {
+    width: 100%;
+  }
+}

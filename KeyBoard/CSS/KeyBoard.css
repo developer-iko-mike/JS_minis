@@ -1,115 +1,275 @@
 * {
-  list-style: none;
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  text-transform: capitalize;
-  border: none;
-  outline: none;
-  border-radius: 0.5rem;
-  color: #343434;
-  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-background-color: #343434;
-  width: 100vw;
-  height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: start;
-  font-size: 1.3rem;
-  font-family: sans-serif;
-  text-align: center;
+  padding: 20px;
+  color: #fff;
   overflow-x: hidden;
 }
 
-.KeyBoard{}
-
-.result_box{
-    margin-top: 5rem;
-    width: 70rem;
-    height: 4rem;
-    background-color: #000;
-    padding: 0.5rem 1.5rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    text-align: left;
+.header {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-#result{
-color: #fff;
-width: 100%;
-height: 100%;
-line-height: 3rem;
-}
-.continer{
-width: 70rem;
-}
-
-.line1 , .line2 , .line3 , .line4{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-
-}
-.line1{
-    margin-top: 3.5rem;
+.header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(78, 205, 196, 0.3);
 }
 
-.key{
-background-color: #eb283a;
-/* padding: 1rem; */
-}
-.esc , .back{
-    padding: 1rem;
-}
-.tab{
-padding: 1rem 2rem;
-}
-.caps , .enter{
-padding: 1rem 2.2rem;
-}
-.lshift , .rshift{
-padding: 1rem 3.5rem;
+.header p {
+  font-size: 1.2rem;
+  opacity: 0.8;
 }
 
-.ma{
-width: 3.5rem;
-height: 3.5rem;
-line-height: 3.5rem;
-}
-.loc2{
-background-color: #fd864b;
-}
-.loc3{
-background-color: #fd8c00;
-}
-.loc4{
-background-color: #fdcc00;
-}
-.loc5{
-background-color: #f2de88;
-}
-.loc6{
-background-color: #ffffff;
-}
-.title{
-margin-top: 3rem;
-color: #fff;
-word-spacing: 1rem;
-font-weight: 900;
-font-family: monospace;
+.result-box {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  max-width: 900px;
+  height: 120px;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.clickKey{
-    transition: all 0.25s ease-in-out;
-    transform: scale(0.85);
-    box-shadow: 0px 0px 2rem -5px #d8ff00;
+#result {
+  color: white;
+  font-size: 1.5rem;
+  min-height: 100%;
+  word-wrap: break-word;
+  line-height: 1.6;
 }
 
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.5rem;
+  background: #4ecdc4;
+  margin-left: 3px;
+  animation: blink 1s infinite;
+  vertical-align: middle;
+}
 
-.color{
-    background-color: #ebeff1;
-    background-color: #fe9c0a;
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.keyboard-line {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.key {
+  background: linear-gradient(145deg, #2a2a40, #222235);
+  color: #e0e0ff;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.15s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  flex-grow: 1;
+}
+
+.key::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.key:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.key:hover::before {
+  transform: translateY(0);
+}
+
+.key.pressed {
+  transform: scale(0.85);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, #ff6b6b, #4ecdc4);
+}
+
+.key.pressed::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.4) 0%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 0;
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 1;
+  }
+}
+
+.key.special {
+  background: linear-gradient(145deg, #4a4a6a, #3a3a5a);
+}
+
+.key.active {
+  background: linear-gradient(145deg, #ff9e68, #ff6b6b);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+.key i {
+  font-size: 1.4rem;
+}
+
+.key.space {
+width: 30%;
+}
+
+.key.backspace,
+.key.tab,
+.key.caps,
+.key.enter,
+.key.shift {
+  background: linear-gradient(145deg, #3d3d5f, #323250);
+}
+
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 25px;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ff4757;
+}
+
+.status-indicator.active {
+  background: #2ed573;
+  box-shadow: 0 0 10px #2ed573;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%; /* 2x عرض صفحه برای حرکت روان */
+    height: 100px;
+    background-size: 50% 100%; /* نصف عرض برای تکرار بی‌درز */
+    transform: rotate(180deg);
+    animation: wave 15s linear infinite;
+    z-index: -1;
+}
+
+.wave:nth-child(2) {
+    animation: wave 20s linear infinite; /* سرعت متفاوت برای افکت موجی */
+    opacity: 0.5;
+}
+
+@keyframes wave {
+    0% { transform: translateX(0) rotate(180deg); }
+    100% { transform: translateX(-50%) rotate(180deg); /* حرکت 50% برای تکرار بی‌درز */
+}
+}
+
+.key-label {
+  position: relative;
+  z-index: 2;
+}
+
+.secondary-label {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  font-size: 0.7rem;
+  color: #4ecdc4;
+}
+
+@media (max-width: 768px) {
+  .key {
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .result-box {
+    height: 100px;
+  }
+
+  #result {
+    font-size: 1.2rem;
+  }
 }

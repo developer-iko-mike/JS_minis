@@ -1,10 +1,10 @@
 const $ = document;
 let usersArray = [
   {id: 1 ,  name: "mohamamd" , family: "niko"},
-  {id: 2 ,  name: "reza" ,     family: "zendadel"},
+  {id: 2 ,  name: "reza" ,     family: "ipsum"},
   {id: 5 ,  name: "amir" ,     family: "alfa"},
   {id: 4 ,  name: "mahdi" ,    family: "gran"},
-  {id: 5 ,  name: "ali" ,      family: "TNT"},
+  {id: 5 ,  name: "ali" ,      family: "ipsum"},
 
   {id: 6 ,  name: "hosin" ,    family: "ops"},
   {id: 7 ,  name: "mohamamd" , family: "amin"},
