@@ -1,6 +1,6 @@
 # پروژه‌های مینی جاوااسکریپتی من 🚀
 
-![JavaScript Projects Banner](https://raw.githubusercontent.com/developer-iko-mike/JS_minis/main/banner.jpg)
+<!-- ![JavaScript Projects Banner](https://raw.githubusercontent.com/developer-iko-mike/JS_minis/main/banner.jpg) -->
 
 ## 📌 فهرست پروژه‌ها (به ترتیب)
 
@@ -34,10 +34,6 @@
 | 26 | [✅ TodoList](https://github.com/developer-iko-mike/JS_minis/tree/main/TodoList) | [![Preview](https://raw.githubusercontent.com/developer-iko-mike/JS_minis/main/TodoList/preview.gif)](https://github.com/developer-iko-mike/JS_minis/tree/main/TodoList) |
 
 ---
-
-<div align="center">
-  <a href="https://github.com/developer-iko-mike/JS_minis">🌟 مشاهده ریپازیتوری کامل در گیتهاب</a>
-</div>
 
 ## ویژگی‌های این لیست:
 1. **ترتیب عددی دقیق** پروژه‌ها

@@ -3,19 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| JS -------- GetUsersRandom |</title>
+    <title>Random User Generator</title>
     <link rel="stylesheet" href="./CSS/GetUsersRandom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="icon/image" href="GreenGTAIcon.png">
 </head>
 <body>
-    <div class="users">
-        <ul id="gandersn"><li>Gander :</li></ul>
-        <ul id="namesn"><li>First Name : - Last Name :</li></ul>
-        <ul id="locationsn"><li>Country: - City :</li></ul>
-        <ul id="emailsn"><li>Email :</li></ul>
-        <ul id="phonesn"><li>Phone :</li></ul>          
+    <div class="container">
+        <h1>Random User Generator</h1>
+        <div class="user-card">
+            <div class="user-avatar">
+                <img id="avatar" src="" alt="User Avatar">
+            </div>
+            <div class="user-info">
+                <ul id="genders">
+                    <li><i class="fas fa-venus-mars"></i> Gender: <span></span></li>
+                </ul>
+                <ul id="names">
+                    <li><i class="fas fa-user"></i> Name: <span></span></li>
+                </ul>
+                <ul id="locations">
+                    <li><i class="fas fa-globe"></i> Location: <span></span></li>
+                </ul>
+                <ul id="emails">
+                    <li><i class="fas fa-envelope"></i> Email: <span></span></li>
+                </ul>
+                <ul id="phones">
+                    <li><i class="fas fa-phone"></i> Phone: <span></span></li>
+                </ul>
+                <ul id="ages">
+                    <li><i class="fas fa-birthday-cake"></i> Age: <span></span></li>
+                </ul>
+            </div>
+        </div>
+        <button id="btn">
+            <div class="moveObj"></div>
+            <span>Generate Random User</span>
+            <i class="fas fa-random"></i>
+        </button>
     </div>
-    <button id="btn"><div class="moveObj"></div>Click To Get RandomLy User</button>
-    <script type="module" src="./JavaST/GetUsersRandom.js"></script>
+    <script src="./JavaST/GetUsersRandom.js"></script>
 </body>
 </html>
