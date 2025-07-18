@@ -19,6 +19,10 @@ height: auto;
 - پروفایل دایره‌ای با حاشیه سفید  
 - نمایش آمار فالوورها و فالووینگ‌ها  
 - دکمه‌های عملگرای Follow و Message  
+- کل منطق این پروژه با یک خط کد جاوا اسکریپتی زده شده
+```js
+document.querySelectorAll('.color').forEach(color => color.addEventListener("click", e => document.documentElement.style.setProperty("--main" , e.target.dataset.color)))
+```
 
 ## 🎨 پالت رنگی  
 <div style="display: flex; justify-content: center; gap: 1rem; margin: 1rem 0;">
