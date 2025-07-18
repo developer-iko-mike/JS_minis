@@ -24,81 +24,113 @@ body {
   overflow-x: hidden;
 }
 
-button , input {
-    background-color: #fff;
-    padding: 1rem;
-    font-size: 1.2rem;
+button,
+input {
+  background-color: #fff;
+  padding: 1rem;
+  font-size: 1.2rem;
 }
 
-:root{
-    --bgy: 2px solid #4c3d3d44;
-    --tdc: #ebeff1;
-    --orn: #fe9c0a;
-    --color-test: #e54c00;
-    --main: #1a6eff;
+:root {
+  --bgy: 2px solid #4c3d3d44;
+  --tdc: #ebeff1;
+  --orn: #fe9c0a;
+  --color-test: #e54c00;
+  --main: #1a6eff;
 }
 
-.MakeLoremPragrap{}
+h1 {
+  margin-top: 3rem;
+  font-size: 3rem;
+}
+main {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-header{
-
+input {
+  width: 5rem;
+  width: 6rem;
+  font-size: 2rem;
 }
-h1{
-    margin-top: 3rem;
-    font-size: 3rem;
+button {
+  cursor: pointer;
+  cursor: pointer;
+  width: 18rem;
+  position: relative;
+  z-index: 1;
+  transition: all 0.2s;
 }
-main{
-    margin-top: 3rem;
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-}
-label{
-
-}
-input{
-    width: 5rem;
-    width: 6rem;
-    font-size: 2rem;
-}
-button{
-    cursor: pointer;
-    cursor: pointer;
-    width: 18rem;
-    position: relative;
-    z-index: 1;
-    transition: all 0.2s;
-}
-.minibox{
-position: absolute;
-top: 0;
-right: 0;
-height: 100%;
-width: 0%;
-z-index: -1;
-background-color: #0064df;
+.minibox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0%;
+  z-index: -1;
+  background-color: #0064df;
 }
 button:hover {
-    color: #fff;
+  color: #fff;
 }
-button:hover .minibox{
-    animation: addwidth .25s ease-in-out forwards;
+button:hover .minibox {
+  animation: addwidth 0.25s ease-in-out forwards;
 }
-@keyframes addwidth{
-0%{
-width: 0%;
-}
-100%{
+@keyframes addwidth {
+  0% {
+    width: 0%;
+  }
+  100% {
     width: 100%;
+  }
+}
+footer {
+  width: 70rem;
+  text-align: left;
+  margin-top: 5rem;
+}
+p {
+  margin-top: 2rem;
+}
 
+@media only screen and (max-width: 1180px) {
+  footer {
+    width: 45rem;
+  }
 }
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    width: 10rem;
+  }
+
+  footer {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
-footer{
-    width: 70rem;
+@media only screen and (max-width: 514px) {
+  main {
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  label {
+    width: 70%;
     text-align: left;
-    margin-top: 5rem;
-}
-p{
-    margin-top: 2rem;
+  }
+  input {
+    width: 20%;
+  }
+  button {
+    width: 100%;
+  }
 }

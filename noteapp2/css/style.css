@@ -1,11 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 #todoList label{
   width: 80%;
 }
 #todoList li{
   list-style-type: none;
-}
-.completed{
-
 }
 .uncompleted label{
   color: #afa7a7;

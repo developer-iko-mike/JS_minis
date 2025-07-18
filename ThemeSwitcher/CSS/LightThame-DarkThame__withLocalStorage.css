@@ -28,7 +28,8 @@ button {
   background-color: #fff;
 }
 
-.LightThame-DarkThame__withLocalStorage {}
+.LightThame-DarkThame__withLocalStorage {
+}
 
 main {
   max-width: 1920px;
@@ -66,6 +67,7 @@ button {
 .mains {
   margin-top: 20rem;
   display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -133,6 +135,10 @@ a {
     flex-direction: column-reverse;
     margin-top: 10rem;
   }
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .left {
     width: 100%;
     text-align: center;
@@ -141,5 +147,42 @@ a {
   }
   .right {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .right {
+    width: 70vw;
+  }
+
+  #css,
+  #react {
+    width: 40%;
+  }
+
+  #html,
+  #js {
+    width: 10rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mains {
+    flex-direction: column;
+  }
+
+  .right {
+    margin-top: 4rem;
+    width: 96vw;
+    flex-direction: column;
+  }
+  #css,
+  #react,
+  #html,
+  #js {
+    width: 12rem;
+    height: auto;
+  }
+
+  .right-top {
+    gap: 1.5rem;
   }
 }

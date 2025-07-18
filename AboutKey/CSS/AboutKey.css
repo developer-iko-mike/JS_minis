@@ -84,6 +84,12 @@ box-shadow: 1px 20px 1rem 1px #e1e1e1;
     display: flex;
     flex-direction: column;
 }
+.mobileIpt{
+  display: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid #44444436
+}
 
 @media only screen and (max-width: 1768px){
 .about{
@@ -111,6 +117,11 @@ box-shadow: 1px 20px 1rem 1px #e1e1e1;
         width: 90vw;
         line-height: 3.5rem;
     }
+}
+@media only screen and (max-width: 576px){
+  .mobileIpt{
+  display: block;
+}
 }
 @media only screen and (max-width: 420px){
     .about__event {
