@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروژه‌های JS_minis</title>
+    <style>
+        :root {
+            --primary: #4ecdc4;
+            --secondary: #ff6b6b;
+            --gray: #6c757d;
+            --success: #28a745;
+            --main: #0abead;
+            --mainOrange: #f57f17;
+            --body: #161d26;
+            --section: #1f2935;
+            --text: #95a5c6;
+            --dark: #f8f9fa;
+            --light: #1a1a2e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            position: relative;
+            min-height: 100vh;
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .backgroundImageType {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(45deg, #000000, #00000066), url(./type.gif);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center, center;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg , #ff6b6b , #4ecdc4 , #ff6b6b , #ff6b6b );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .description {
+            color: #fff;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .project-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: #202020cc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 280px;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-icon {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            position: relative;
+            padding-bottom: 5px;
+            text-decoration: none;
+            color: var(--dark);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .project-icon::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .project-icon:hover::after {
+            width: 100%;
+        }
+
+        .project-title {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* استایل دکمه‌ها */
+        .link {
+            display: inline-block;
+            width: 12rem;
+            height: 3.5rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 2rem;
+            border: none;
+            color: #fff;
+            text-transform: capitalize;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0abead;
+            text-decoration: none;
+            margin: 0.5rem auto;
+            padding: 0 1.5rem;
+            box-shadow: 0 4px 8px rgba(11, 190, 173, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .link:hover::before {
+            left: 100%;
+        }
+
+        .link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(11, 190, 173, 0.4);
+        }
+
+        .link:active {
+            transform: translateY(0);
+        }
+
+        .linkOrange {
+            box-shadow: 0 4px 8px rgba(245, 127, 23, 0.3);
+            background-color: #f57f17;
+        }
+
+        .linkOrange:hover {
+            box-shadow: 0 6px 12px rgba(245, 127, 23, 0.4);
+        }
+
+        .linkPurple {
+            box-shadow: 0 4px 8px rgba(128, 58, 251, 0.3);
+            background-color: #803afb;
+        }
+
+        .linkPurple:hover {
+            box-shadow: 0 6px 12px rgba(128, 58, 251, 0.4);
+        }
+
+        .linkPink {
+            box-shadow: 0 4px 8px rgba(245, 39, 108, 0.3);
+            background-color: #f5276c;
+        }
+
+        .linkPink:hover {
+            box-shadow: 0 6px 12px rgba(245, 39, 108, 0.4);
+        }
+
+        .linkBlue {
+            background-color: #1e88e5;
+            box-shadow: 0 4px 8px rgba(30, 136, 229, 0.3);
+        }
+
+        .linkBlue:hover {
+            box-shadow: 0 6px 12px rgba(30, 136, 229, 0.4);
+        }
+
+        .linkGreen {
+            background-color: #43a047;
+            box-shadow: 0 4px 8px rgba(67, 160, 71, 0.3);
+        }
+
+        .linkGreen:hover {
+            box-shadow: 0 6px 12px rgba(67, 160, 71, 0.4);
+        }
+
+        .linkRed {
+            background-color: #e53935;
+            box-shadow: 0 4px 8px rgba(229, 57, 53, 0.3);
+        }
+
+        .linkRed:hover {
+            box-shadow: 0 6px 12px rgba(229, 57, 53, 0.4);
+        }
+
+        .linkTeal {
+            background-color: #00897b;
+            box-shadow: 0 4px 8px rgba(0, 137, 123, 0.3);
+        }
+
+        .linkTeal:hover {
+            box-shadow: 0 6px 12px rgba(0, 137, 123, 0.4);
+        }
+
+        .linkIndigo {
+            background-color: #3949ab;
+            box-shadow: 0 4px 8px rgba(57, 73, 171, 0.3);
+        }
+
+        .linkIndigo:hover {
+            box-shadow: 0 6px 12px rgba(57, 73, 171, 0.4);
+        }
+
+        .linkCyan {
+            background-color: #00bcd4;
+            box-shadow: 0 4px 8px rgba(0, 188, 212, 0.3);
+        }
+
+        .linkCyan:hover {
+            box-shadow: 0 6px 12px rgba(0, 188, 212, 0.4);
+        }
+
+        .linkLime {
+            background-color: #c0ca33;
+            box-shadow: 0 4px 8px rgba(192, 202, 51, 0.3);
+        }
+
+        .linkLime:hover {
+            box-shadow: 0 6px 12px rgba(192, 202, 51, 0.4);
+        }
+
+        .linkBrown {
+            background-color: #6d4c41;
+            box-shadow: 0 4px 8px rgba(109, 76, 65, 0.3);
+        }
+
+        .linkBrown:hover {
+            box-shadow: 0 6px 12px rgba(109, 76, 65, 0.4);
+        }
+
+        .linkGray {
+            background-color: #546e7a;
+            box-shadow: 0 4px 8px rgba(84, 110, 122, 0.3);
+        }
+
+        .linkGray:hover {
+            box-shadow: 0 6px 12px rgba(84, 110, 122, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+        }
+
+        footer a {
+            color: var(--gray);
+            text-decoration: none;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .projects-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .project-item {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="backgroundImageType"></div>
+    <div class="container">
+        <header>
+            <h1>پروژه‌های کوچک جاوااسکریپت</h1>
+            <p class="description">
+                مجموعه‌ای از پروژه‌های کوچک و کاربردی جاوااسکریپت که مهارت‌های مختلف برنامه‌نویسی را پوشش می‌دهند.
+            </p>
+        </header>
+
+        <div class="projects-container">
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/AboutKey">
+                    <span class="icon">⌨️</span>
+                    <span class="title">AboutKey</span>
+                </a>
+                <a href="AboutKey/AboutKey.html" class="link linkBlue">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/BookList">
+                    <span class="icon">📚</span>
+                    <span class="title">BookList</span>
+                </a>
+                <a href="BookList/BookList.html" class="link linkPurple">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/BoxRandomImage">
+                    <span class="icon">🖼️</span>
+                    <span class="title">BoxRandomImage</span>
+                </a>
+                <a href="BoxRandomImage/Random-image.html" class="link linkTeal">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/BuyTickets">
+                    <span class="icon">🎫</span>
+                    <span class="title">BuyTickets</span>
+                </a>
+                <a href="BuyTickets/Buy-Taket.html" class="link linkIndigo">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/Convert-C-To-F">
+                    <span class="icon">🌡️</span>
+                    <span class="title">Convert-C-o-F</span>
+                </a>
+                <a href="Convert-C-To-F/Convert.html" class="link linkCyan">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/GetUsersRandom">
+                    <span class="icon">👥</span>
+                    <span class="title">GetUsersRandom</span>
+                </a>
+                <a href="GetUsersRandom/GetUsersRandom.html" class="link linkLime">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/InputMaxLengh">
+                    <span class="icon">🔤</span>
+                    <span class="title">InputMaxLengh</span>
+                </a>
+                <a href="InputMaxLengh/LoginWithMaxLength.html" class="link linkBrown">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/KeyBoard">
+                    <span class="icon">⌨️</span>
+                    <span class="title">KeyBoard</span>
+                </a>
+                <a href="KeyBoard/KeyBoard.html" class="link linkGray">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/LightRange">
+                    <span class="icon">💡</span>
+                    <span class="title">LightRange</span>
+                </a>
+                <a href="LightRange/LightRange.html" class="link linkOrange">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon"
+                    href="https://github.com/developer-iko-mike/JS_minis/tree/main/LoadingBeforeSite">
+                    <span class="icon">⏳</span>
+                    <span class="title">LoadingBeforeSite</span>
+                </a>
+                <a href="LoadingBeforeSite/index.html" class="link linkPink">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/MakeLorem">
+                    <span class="icon">📝</span>
+                    <span class="title">MakeLorem</span>
+                </a>
+                <a href="MakeLorem/MakeLoremPragrap.html" class="link linkRed">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/multiplay">
+                    <span class="icon">✖️</span>
+                    <span class="title">multiplay</span>
+                </a>
+                <a href="multiplay/Zarbs.html" class="link linkGreen">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/MusicPlayer">
+                    <span class="icon">🎵</span>
+                    <span class="title">MusicPlayer</span>
+                </a>
+                <a href="MusicPlayer/MusicPlayer.html" class="link linkBlue">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/MusicPlayer2">
+                    <span class="icon">🎶</span>
+                    <span class="title">MusicPlayer2</span>
+                </a>
+                <a href="MusicPlayer2/index.html" class="link linkPurple">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/NoteApp">
+                    <span class="icon">📝</span>
+                    <span class="title">NoteApp</span>
+                </a>
+                <a href="NoteApp/NoteApp.html" class="link linkTeal">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/noteapp2">
+                    <span class="icon">📋</span>
+                    <span class="title">NoteApp2</span>
+                </a>
+                <a href="NoteApp2/index.html" class="link linkIndigo">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/Pageitions">
+                    <span class="icon">📄</span>
+                    <span class="title">Pageitions</span>
+                </a>
+                <a href="Pageitions/Pageitions.html" class="link linkCyan">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/PasswordToggle">
+                    <span class="icon">🔒</span>
+                    <span class="title">PasswordToggle</span>
+                </a>
+                <a href="PasswordToggle/index.html" class="link linkLime">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/Profile">
+                    <span class="icon">👤</span>
+                    <span class="title">Profile</span>
+                </a>
+                <a href="Profile/Profile.html" class="link linkBrown">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/Random-BG">
+
+                    <span class="icon">🎨</span>
+                    <span class="title">Random-BG</span>
+                </a>
+                <a href="Random-BG/RandomBG.html" class="link linkGray">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/RegEx">
+                    <span class="icon">🔍</span>
+                    <span class="title">RegEx</span>
+                </a>
+                <a href="RegEx/index.html" class="link linkOrange">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/RightClickMenu">
+                    <span class="icon">🖱️</span>
+                    <span class="title">RightClickMenu</span>
+                </a>
+                <a href="RightClickMenu/RightClickMenu.html" class="link linkPink">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon"
+                    href="https://github.com/developer-iko-mike/JS_minis/tree/main/SearchBoxCoustomTitle">
+                    <span class="icon">🔎</span>
+                    <span class="title">SearchBoxCoustomTitle</span>
+                </a>
+                <a href="SearchBoxCoustomTitle/JSPRO.html" class="link linkRed">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/ShoesShop">
+                    <span class="icon">👟</span>
+                    <span class="title">ShoesShop</span>
+                </a>
+                <a href="ShoesShop/ShoesProject.html" class="link linkGreen">مشاهده پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/ThemeSwitcher">
+                    <span class="icon">🌓</span>
+                    <span class="title">ThemeSwitcher</span>
+                </a>
+                <a href="ThemeSwitcher/LightThame-DarkThame__withLocalStorage.html" class="link linkBlue">مشاهده
+                    پروژه</a>
+            </div>
+
+            <div class="project-item">
+                <a class="project-icon" href="https://github.com/developer-iko-mike/JS_minis/tree/main/TodoList">
+                    <span class="icon">✅</span>
+                    <span class="title">TodoList</span>
+                </a>
+                <a href="TodoList/TodoList.html" class="link linkPurple">مشاهده پروژه</a>
+            </div>
+        </div>
+
+        <footer>
+            <a href="https://github.com/developer-iko-mike">© 2024 توسعه داده شده توسط developer iko mike</a>
+        </footer>
+    </div>
+</body>
+
+</html>
