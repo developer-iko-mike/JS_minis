@@ -36,13 +36,14 @@ body {
   color: #424242;
 }
 .about {
-  display: flex;
   display: none;
   width: 80vw;
-  justify-content: space-between;
+  margin: 0 auto;
+  gap: 5%;
+  flex-wrap: wrap;
 }
 .about__event {
-  width: 22rem;
+  flex-grow: 1;
   height: 9.5rem;
   background-color: #fff;
   box-shadow: 1px 1px 1rem 1px #e1e1e1;
