@@ -2,7 +2,10 @@
 
 <!-- ![JavaScript Projects Banner](https://raw.githubusercontent.com/developer-iko-mike/JS_minis/main/banner.jpg) -->
 
+## <div align="center"><a href="https://developer-iko-mike.github.io/JS_minis/">مشاهده دمو</a></div>
+
 ## 📌 فهرست پروژه‌ها (به ترتیب)
+
 
 | # | پروژه | پیش‌نمایش |  
 |---|-------|-----------|
